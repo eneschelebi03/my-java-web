@@ -21,6 +21,9 @@ public class Route {
 
     private String name;
 
+    @Column(columnDefinition = "TEXT")
+    private String description;
+
     @ManyToOne
     private User author;
 
@@ -29,8 +32,11 @@ public class Route {
     @OneToMany(targetEntity = Comments.class, mappedBy = "route", cascade = CascadeType.ALL)
     private Set<Comments> comments;
 
-    @OneToOne
-    private Picture header;
+    @OneToMany(mappedBy = "route", fetch = FetchType.EAGER)
+    private Set<Picture> pictures;
+
+    @ManyToMany
+    private Set<Category> categories;
 
     public Route() {}
 
@@ -97,12 +103,30 @@ public class Route {
         return this;
     }
 
-    public Picture getHeader() {
-        return header;
+    public Set<Category> getCategories() {
+        return categories;
     }
 
-    public Route setHeader(Picture header) {
-        this.header = header;
+    public Route setCategories(Set<Category> categories) {
+        this.categories = categories;
+        return this;
+    }
+
+    public Set<Picture> getPictures() {
+        return pictures;
+    }
+
+    public Route setPictures(Set<Picture> pictures) {
+        this.pictures = pictures;
+        return this;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Route setDescription(String description) {
+        this.description = description;
         return this;
     }
 }

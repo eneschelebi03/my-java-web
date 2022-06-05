@@ -1,7 +1,6 @@
 package bg.softuni.pathfinder.model;
 
 import javax.persistence.*;
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
