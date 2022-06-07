@@ -1,6 +1,4 @@
-package bg.softuni.mobilele.entity;
-
-import org.apache.catalina.User;
+package bg.softuni.mobilele.model.entity;
 
 import javax.persistence.*;
 import java.util.ArrayList;

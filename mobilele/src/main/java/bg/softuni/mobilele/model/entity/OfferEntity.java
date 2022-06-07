@@ -1,8 +1,7 @@
-package bg.softuni.mobilele.entity;
+package bg.softuni.mobilele.model.entity;
 
-import bg.softuni.mobilele.entity.enums.EngineEnum;
-import bg.softuni.mobilele.entity.enums.TransmissionEnum;
-import net.bytebuddy.utility.nullability.MaybeNull;
+import bg.softuni.mobilele.model.entity.enums.EngineEnum;
+import bg.softuni.mobilele.model.entity.enums.TransmissionEnum;
 import org.hibernate.annotations.GenericGenerator;
 import org.hibernate.annotations.Type;
 

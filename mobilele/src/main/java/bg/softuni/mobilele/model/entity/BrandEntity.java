@@ -1,7 +1,6 @@
-package bg.softuni.mobilele.entity;
+package bg.softuni.mobilele.model.entity;
 
 import javax.persistence.*;
-import javax.transaction.Transactional;
 import java.util.ArrayList;
 import java.util.List;
 
