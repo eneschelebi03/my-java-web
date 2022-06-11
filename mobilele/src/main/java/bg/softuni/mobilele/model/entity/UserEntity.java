@@ -12,8 +12,13 @@ public class UserEntity extends BaseEntity {
     private String email;
 
     private String password;
+
+    @Column(nullable = false)
     private String firstName;
+
+    @Column(nullable = false)
     private String lastName;
+
     private boolean isActive;
     private String imageUrl;
 
