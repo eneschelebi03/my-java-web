@@ -11,10 +11,11 @@
     <groupId>bg.softuni</groupId>
     <artifactId>battleships</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>battleships</name>
+    <fullName>battleships</fullName>
     <description>battleships</description>
     <properties>
         <java.version>17</java.version>
+        <org.mapstruct.version>1.5.1.Final</org.mapstruct.version>
     </properties>
     <dependencies>
         <dependency>
@@ -44,6 +45,11 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+            <version>1.5.1.Final</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -52,6 +58,24 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
+                <configuration>
+                    <source>16</source> <!-- depending on your project -->
+                    <target>16</target> <!-- depending on your project -->
+                    <annotationProcessorPaths>
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>1.5.1.Final</version>
+                        </path>
+                        <!-- other annotation processors -->
+                    </annotationProcessorPaths>
+                </configuration>
+            </plugin>
+
         </plugins>
     </build>
 
